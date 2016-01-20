@@ -40,7 +40,7 @@ email_append_to = ["Job Applicant", "Opportunity", "Issue"]
 
 calendars = ["Task", "Production Order", "Time Log", "Leave Application", "Sales Order", "Holiday List"]
 
-website_generators = ["Item Group", "Item", "Sales Partner"]
+website_generators = ["Item Group", "Item", "Sales Partner", "Project"]
 
 website_context = {
 	"favicon": 	"/assets/erpnext/images/favicon.png",

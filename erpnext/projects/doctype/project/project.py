@@ -7,13 +7,22 @@ import frappe
 from frappe.utils import flt, getdate
 from frappe import _
 
-from frappe.model.document import Document
+from frappe.website.website_generator import WebsiteGenerator
 
-class Project(Document):
+class Project(WebsiteGenerator):
+	website = frappe._dict(
+		template = "templates/generators/projects/project.html",
+		condition_field = "published",
+		page_title_field = "project_name",
+	)
+
 	def get_feed(self):
 		return '{0}: {1}'.format(_(self.status), self.project_name)
 
-	def onload(self):
+	def __setup__(self):
+		self.load_tasks()
+
+	def load_tasks(self):
 		"""Load project tasks for quick view"""
 		if not self.get("tasks"):
 			for task in self.get_tasks():
@@ -26,13 +35,11 @@ class Project(Document):
 					"task_id": task.name
 				})
 
-	def __setup__(self):
-		self.onload()
-
 	def get_tasks(self):
 		return frappe.get_all("Task", "*", {"project": self.name}, order_by="exp_start_date asc")
 
 	def validate(self):
+		super(Project, self).validate()
 		self.validate_dates()
 		self.sync_tasks()
 		self.tasks = []

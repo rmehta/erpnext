@@ -6,7 +6,6 @@ import frappe
 from frappe import _
 from frappe.utils import flt, cint, getdate, formatdate, comma_and, time_diff_in_seconds, to_timedelta
 from frappe.model.document import Document
-from dateutil.parser import parse
 
 class WorkstationHolidayError(frappe.ValidationError): pass
 class NotInWorkingHoursError(frappe.ValidationError): pass
@@ -65,7 +64,8 @@ def is_within_operating_hours(workstation, operation, from_datetime, to_datetime
 			if slot_length >= operation_length:
 				return
 
-	frappe.throw(_("Operation {0} longer than any available working hours in workstation {1}, break down the operation into multiple operations").format(operation, workstation.name), NotInWorkingHoursError)
+	frappe.throw(_("Time taken for operation {0} ({1} minutes) must be shorter than available working hours for Workstation {2}. Suggestion: Try breaking down the operation into smaller units so that it can fit within working hours, or increase the working hours for the Workstation").format(
+		frappe.bold(operation), operation_length/60, frappe.bold(workstation.name)), NotInWorkingHoursError, title='Operation Too Long')
 
 def check_workstation_for_holiday(workstation, from_datetime, to_datetime):
 	holiday_list = frappe.db.get_value("Workstation", workstation, "holiday_list")

@@ -136,7 +136,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:29:20.531725", 
+ "modified": "2016-12-29 15:00:04.437590", 
  "modified_by": "Administrator", 
  "module": "Schools", 
  "name": "Topic", 
@@ -171,5 +171,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "title_field": "course", 
+ "track_changes": 1, 
  "track_seen": 0
 }

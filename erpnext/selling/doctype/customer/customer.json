@@ -1066,7 +1066,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:26:57.948263", 
+ "modified": "2016-12-29 15:00:04.797926", 
  "modified_by": "Administrator", 
  "module": "Selling", 
  "name": "Customer", 
@@ -1269,5 +1269,6 @@
  "search_fields": "customer_name,customer_group,territory", 
  "sort_order": "ASC", 
  "title_field": "customer_name", 
+ "track_changes": 1, 
  "track_seen": 0
 }

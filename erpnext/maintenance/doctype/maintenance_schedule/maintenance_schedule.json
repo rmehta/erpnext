@@ -715,7 +715,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:54:23.335854", 
+ "modified": "2016-12-29 14:59:59.673264", 
  "modified_by": "Administrator", 
  "module": "Maintenance", 
  "name": "Maintenance Schedule", 
@@ -749,5 +749,6 @@
  "search_fields": "status,customer,customer_name", 
  "sort_order": "DESC", 
  "timeline_field": "customer", 
+ "track_changes": 1, 
  "track_seen": 0
 }

@@ -1079,7 +1079,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-11-07 05:10:32.190134", 
+ "modified": "2016-12-29 15:00:09.404044", 
  "modified_by": "Administrator", 
  "module": "Setup", 
  "name": "Email Digest", 
@@ -1133,5 +1133,6 @@
  "read_only_onload": 0, 
  "sort_field": "modified", 
  "sort_order": "DESC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

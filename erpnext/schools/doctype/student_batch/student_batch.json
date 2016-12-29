@@ -309,7 +309,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-01 13:18:12.024001", 
+ "modified": "2016-12-29 14:59:49.231071", 
  "modified_by": "Administrator", 
  "module": "Schools", 
  "name": "Student Batch", 
@@ -365,5 +365,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "title_field": "", 
+ "track_changes": 1, 
  "track_seen": 0
 }

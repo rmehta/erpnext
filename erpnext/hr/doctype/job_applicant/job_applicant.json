@@ -246,7 +246,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:29:24.405606", 
+ "modified": "2016-12-29 15:00:04.305609", 
  "modified_by": "Administrator", 
  "module": "HR", 
  "name": "Job Applicant", 
@@ -280,5 +280,6 @@
  "search_fields": "applicant_name", 
  "sort_order": "ASC", 
  "title_field": "applicant_name", 
+ "track_changes": 1, 
  "track_seen": 0
 }

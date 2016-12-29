@@ -663,7 +663,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:53:24.141335", 
+ "modified": "2016-12-29 15:00:00.277097", 
  "modified_by": "Administrator", 
  "module": "Selling", 
  "name": "Installation Note", 
@@ -719,5 +719,6 @@
  "sort_order": "DESC", 
  "timeline_field": "customer", 
  "title_field": "customer_name", 
+ "track_changes": 1, 
  "track_seen": 0
 }

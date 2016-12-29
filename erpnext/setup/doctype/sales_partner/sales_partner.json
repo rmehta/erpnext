@@ -693,7 +693,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:29:37.597903", 
+ "modified": "2016-12-29 15:00:04.079321", 
  "modified_by": "Administrator", 
  "module": "Setup", 
  "name": "Sales Partner", 
@@ -767,5 +767,6 @@
  "read_only": 0, 
  "read_only_onload": 0, 
  "sort_order": "ASC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

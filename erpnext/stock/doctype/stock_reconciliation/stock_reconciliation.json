@@ -417,7 +417,7 @@
  "istable": 0, 
  "max_attachments": 1, 
  "menu_index": 0, 
- "modified": "2016-11-07 05:59:26.309341", 
+ "modified": "2016-12-29 14:59:41.389315", 
  "modified_by": "Administrator", 
  "module": "Stock", 
  "name": "Stock Reconciliation", 
@@ -451,5 +451,6 @@
  "search_fields": "posting_date", 
  "sort_field": "modified", 
  "sort_order": "DESC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

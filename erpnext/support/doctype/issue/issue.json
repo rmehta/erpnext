@@ -792,7 +792,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:30:07.182340", 
+ "modified": "2016-12-29 15:00:03.807454", 
  "modified_by": "Administrator", 
  "module": "Support", 
  "name": "Issue", 
@@ -827,5 +827,6 @@
  "sort_order": "ASC", 
  "timeline_field": "customer", 
  "title_field": "subject", 
+ "track_changes": 1, 
  "track_seen": 1
 }

@@ -24,6 +24,7 @@
    "ignore_xss_filter": 0, 
    "in_filter": 0, 
    "in_list_view": 1, 
+   "in_standard_filter": 0, 
    "label": "Date", 
    "length": 0, 
    "no_copy": 0, 
@@ -32,6 +33,7 @@
    "print_hide": 0, 
    "print_hide_if_no_value": 0, 
    "read_only": 0, 
+   "remember_last_selected_value": 0, 
    "report_hide": 0, 
    "reqd": 1, 
    "search_index": 0, 
@@ -138,7 +140,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-08 05:28:09.772560", 
+ "modified": "2016-12-29 14:59:55.554345", 
  "modified_by": "Administrator", 
  "module": "Setup", 
  "name": "Currency Exchange", 
@@ -235,5 +237,6 @@
  "sort_field": "name", 
  "sort_order": "DESC", 
  "title_field": "", 
+ "track_changes": 1, 
  "track_seen": 0
 }

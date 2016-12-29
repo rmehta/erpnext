@@ -3188,6 +3188,7 @@
    "ignore_xss_filter": 0, 
    "in_filter": 1, 
    "in_list_view": 0, 
+   "in_standard_filter": 0, 
    "label": "Status", 
    "length": 0, 
    "no_copy": 1, 
@@ -4182,7 +4183,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-11-09 14:18:24.760263", 
+ "modified": "2016-12-29 14:59:54.649231", 
  "modified_by": "Administrator", 
  "module": "Accounts", 
  "name": "Sales Invoice", 
@@ -4281,5 +4282,6 @@
  "sort_order": "DESC", 
  "timeline_field": "customer", 
  "title_field": "title", 
+ "track_changes": 1, 
  "track_seen": 0
 }

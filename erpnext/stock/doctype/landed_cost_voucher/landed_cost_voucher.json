@@ -444,7 +444,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-21 01:40:13.959409", 
+ "modified": "2016-12-29 15:00:09.730125", 
  "modified_by": "Administrator", 
  "module": "Stock", 
  "name": "Landed Cost Voucher", 
@@ -478,5 +478,6 @@
  "read_only_onload": 0, 
  "sort_field": "modified", 
  "sort_order": "DESC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

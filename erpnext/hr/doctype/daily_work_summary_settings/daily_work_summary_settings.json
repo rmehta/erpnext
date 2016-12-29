@@ -166,7 +166,7 @@
  "issingle": 1, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-21 00:55:20.726328", 
+ "modified": "2016-12-29 14:59:51.461907", 
  "modified_by": "Administrator", 
  "module": "HR", 
  "name": "Daily Work Summary Settings", 
@@ -200,5 +200,6 @@
  "read_only_onload": 0, 
  "sort_field": "modified", 
  "sort_order": "DESC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

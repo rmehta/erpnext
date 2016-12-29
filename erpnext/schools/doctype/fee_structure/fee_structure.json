@@ -284,7 +284,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-11-07 05:25:37.393218", 
+ "modified": "2016-12-29 15:00:05.322333", 
  "modified_by": "Administrator", 
  "module": "Schools", 
  "name": "Fee Structure", 
@@ -319,5 +319,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "title_field": "program", 
+ "track_changes": 1, 
  "track_seen": 0
 }

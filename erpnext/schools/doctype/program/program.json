@@ -278,7 +278,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-11-07 05:23:07.030155", 
+ "modified": "2016-12-29 15:00:06.516012", 
  "modified_by": "Administrator", 
  "module": "Schools", 
  "name": "Program", 
@@ -313,5 +313,6 @@
  "search_fields": "department", 
  "sort_field": "modified", 
  "sort_order": "DESC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

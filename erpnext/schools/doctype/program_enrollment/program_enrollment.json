@@ -369,7 +369,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-11-18 14:20:10.023790", 
+ "modified": "2016-12-29 14:59:51.826468", 
  "modified_by": "Administrator", 
  "module": "Schools", 
  "name": "Program Enrollment", 
@@ -404,5 +404,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "title_field": "student_name", 
+ "track_changes": 1, 
  "track_seen": 0
 }

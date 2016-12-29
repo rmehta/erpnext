@@ -222,7 +222,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:18:44.095798", 
+ "modified": "2016-12-29 15:00:07.214676", 
  "modified_by": "Administrator", 
  "module": "Accounts", 
  "name": "Purchase Taxes and Charges Template", 
@@ -296,5 +296,6 @@
  "read_only": 0, 
  "read_only_onload": 0, 
  "sort_order": "DESC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

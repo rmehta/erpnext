@@ -1293,7 +1293,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-11-07 05:53:46.738161", 
+ "modified": "2016-12-29 14:59:59.917309", 
  "modified_by": "Administrator", 
  "module": "Accounts", 
  "name": "Journal Entry", 
@@ -1370,5 +1370,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "title_field": "title", 
+ "track_changes": 1, 
  "track_seen": 0
 }

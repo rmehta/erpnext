@@ -196,7 +196,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 5, 
- "modified": "2016-11-07 05:50:33.973883", 
+ "modified": "2016-12-29 15:00:00.894311", 
  "modified_by": "Administrator", 
  "module": "Stock", 
  "name": "Batch", 
@@ -228,5 +228,6 @@
  "read_only": 0, 
  "read_only_onload": 0, 
  "title_field": "item", 
+ "track_changes": 1, 
  "track_seen": 0
 }

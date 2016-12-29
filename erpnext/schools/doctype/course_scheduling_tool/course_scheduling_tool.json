@@ -592,7 +592,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-11-21 16:58:29.295922", 
+ "modified": "2016-12-29 14:59:50.904180", 
  "modified_by": "Administrator", 
  "module": "Schools", 
  "name": "Course Scheduling Tool", 
@@ -626,5 +626,6 @@
  "read_only_onload": 0, 
  "sort_field": "modified", 
  "sort_order": "DESC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

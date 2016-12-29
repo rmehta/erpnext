@@ -434,7 +434,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-15 14:51:43.312590", 
+ "modified": "2016-12-29 15:01:49.273548", 
  "modified_by": "Administrator", 
  "module": "Stock", 
  "name": "Bin", 
@@ -504,10 +504,11 @@
    "write": 0
   }
  ], 
- "quick_entry": 1, 
+ "quick_entry": 0, 
  "read_only": 0, 
  "read_only_onload": 0, 
  "search_fields": "item_code,warehouse", 
  "sort_order": "ASC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

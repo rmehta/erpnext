@@ -825,7 +825,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-18 15:59:19.774500", 
+ "modified": "2016-12-29 14:59:51.560616", 
  "modified_by": "Administrator", 
  "module": "Accounts", 
  "name": "Asset", 
@@ -859,5 +859,6 @@
  "read_only_onload": 1, 
  "sort_field": "modified", 
  "sort_order": "DESC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

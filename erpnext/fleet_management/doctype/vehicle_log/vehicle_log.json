@@ -640,7 +640,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:24:55.310831", 
+ "modified": "2016-12-29 15:00:05.652748", 
  "modified_by": "Administrator", 
  "module": "Fleet Management", 
  "name": "Vehicle Log", 
@@ -675,5 +675,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "title_field": "", 
+ "track_changes": 1, 
  "track_seen": 0
 }

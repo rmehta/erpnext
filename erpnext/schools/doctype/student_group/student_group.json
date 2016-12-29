@@ -311,7 +311,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-12-01 12:57:17.125085", 
+ "modified": "2016-12-29 14:59:49.403196", 
  "modified_by": "Administrator", 
  "module": "Schools", 
  "name": "Student Group", 
@@ -368,5 +368,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "title_field": "", 
+ "track_changes": 1, 
  "track_seen": 0
 }

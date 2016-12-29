@@ -139,7 +139,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-12 17:31:53.349301", 
+ "modified": "2016-12-29 14:59:48.489991", 
  "modified_by": "Administrator", 
  "module": "Setup", 
  "name": "Terms and Conditions", 
@@ -276,5 +276,6 @@
  "read_only": 0, 
  "read_only_onload": 0, 
  "sort_order": "ASC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

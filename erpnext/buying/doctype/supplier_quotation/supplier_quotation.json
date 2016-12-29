@@ -2045,7 +2045,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-11-07 05:59:51.237877", 
+ "modified": "2016-12-29 14:59:56.894314", 
  "modified_by": "Administrator", 
  "module": "Buying", 
  "name": "Supplier Quotation", 
@@ -2165,5 +2165,6 @@
  "sort_order": "DESC", 
  "timeline_field": "supplier", 
  "title_field": "title", 
+ "track_changes": 1, 
  "track_seen": 0
 }

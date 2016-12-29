@@ -894,7 +894,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-14 02:02:10.848614", 
+ "modified": "2016-12-29 14:59:47.196567", 
  "modified_by": "Administrator", 
  "module": "HR", 
  "name": "Salary Structure", 
@@ -950,5 +950,6 @@
  "sort_order": "DESC", 
  "timeline_field": "", 
  "title_field": "", 
+ "track_changes": 1, 
  "track_seen": 0
 }

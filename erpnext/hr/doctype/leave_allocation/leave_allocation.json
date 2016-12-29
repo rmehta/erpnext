@@ -474,7 +474,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:26:00.812083", 
+ "modified": "2016-12-29 15:00:05.145821", 
  "modified_by": "Administrator", 
  "module": "HR", 
  "name": "Leave Allocation", 
@@ -530,5 +530,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "timeline_field": "employee", 
+ "track_changes": 1, 
  "track_seen": 0
 }

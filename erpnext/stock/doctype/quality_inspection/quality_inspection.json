@@ -691,7 +691,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-15 14:53:04.785375", 
+ "modified": "2016-12-29 14:59:43.658869", 
  "modified_by": "Administrator", 
  "module": "Stock", 
  "name": "Quality Inspection", 
@@ -724,5 +724,6 @@
  "read_only_onload": 0, 
  "search_fields": "item_code, report_date, reference_name", 
  "sort_order": "ASC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

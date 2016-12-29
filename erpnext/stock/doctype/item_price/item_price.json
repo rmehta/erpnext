@@ -386,7 +386,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-15 14:52:09.842544", 
+ "modified": "2016-12-29 14:59:44.119541", 
  "modified_by": "Administrator", 
  "module": "Stock", 
  "name": "Item Price", 
@@ -440,5 +440,6 @@
  "read_only_onload": 0, 
  "sort_order": "ASC", 
  "title_field": "item_code", 
+ "track_changes": 1, 
  "track_seen": 0
 }

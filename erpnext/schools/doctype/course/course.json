@@ -219,7 +219,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-08-08 05:26:26.442635", 
+ "modified": "2016-12-29 15:00:13.117222", 
  "modified_by": "Administrator", 
  "module": "Schools", 
  "name": "Course", 
@@ -257,6 +257,7 @@
    "export": 1, 
    "if_owner": 0, 
    "import": 0, 
+   "is_custom": 0, 
    "permlevel": 0, 
    "print": 1, 
    "read": 1, 
@@ -274,5 +275,6 @@
  "search_fields": "department", 
  "sort_field": "modified", 
  "sort_order": "DESC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

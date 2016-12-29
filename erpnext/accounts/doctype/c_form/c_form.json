@@ -409,7 +409,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 3, 
- "modified": "2016-11-07 05:51:03.273512", 
+ "modified": "2016-12-29 15:00:00.721820", 
  "modified_by": "Administrator", 
  "module": "Accounts", 
  "name": "C-Form", 
@@ -484,5 +484,6 @@
  "read_only_onload": 0, 
  "sort_order": "DESC", 
  "timeline_field": "customer", 
+ "track_changes": 1, 
  "track_seen": 0
 }

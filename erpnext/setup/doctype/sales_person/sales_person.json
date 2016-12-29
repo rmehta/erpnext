@@ -404,7 +404,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-12 18:47:13.924225", 
+ "modified": "2016-12-29 14:59:48.318600", 
  "modified_by": "Administrator", 
  "module": "Setup", 
  "name": "Sales Person", 
@@ -479,5 +479,6 @@
  "read_only_onload": 0, 
  "search_fields": "parent_sales_person", 
  "sort_order": "ASC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

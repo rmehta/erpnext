@@ -3120,7 +3120,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-12-16 03:56:08.745185", 
+ "modified": "2016-12-29 14:59:42.551597", 
  "modified_by": "Administrator", 
  "module": "Stock", 
  "name": "Delivery Note", 
@@ -3240,5 +3240,6 @@
  "sort_order": "DESC", 
  "timeline_field": "customer", 
  "title_field": "title", 
+ "track_changes": 1, 
  "track_seen": 0
 }

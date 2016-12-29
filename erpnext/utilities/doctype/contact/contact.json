@@ -653,7 +653,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:30:56.576752", 
+ "modified": "2016-12-29 15:00:03.518876", 
  "modified_by": "Administrator", 
  "module": "Utilities", 
  "name": "Contact", 
@@ -917,5 +917,6 @@
  "read_only": 0, 
  "read_only_onload": 0, 
  "sort_order": "ASC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

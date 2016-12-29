@@ -111,7 +111,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:54:39.560399", 
+ "modified": "2016-12-29 14:59:59.566143", 
  "modified_by": "Administrator", 
  "module": "Accounts", 
  "name": "Mode of Payment", 
@@ -164,5 +164,6 @@
  "read_only": 0, 
  "read_only_onload": 0, 
  "sort_order": "ASC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

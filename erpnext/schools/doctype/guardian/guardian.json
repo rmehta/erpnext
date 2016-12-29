@@ -414,7 +414,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-28 16:14:58.836437", 
+ "modified": "2016-12-29 15:00:12.600209", 
  "modified_by": "Administrator", 
  "module": "Schools", 
  "name": "Guardian", 
@@ -449,5 +449,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "title_field": "guardian_name", 
+ "track_changes": 1, 
  "track_seen": 0
 }

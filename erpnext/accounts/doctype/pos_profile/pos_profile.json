@@ -1067,7 +1067,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-12 17:02:22.323006", 
+ "modified": "2016-12-29 14:59:48.637989", 
  "modified_by": "Administrator", 
  "module": "Accounts", 
  "name": "POS Profile", 
@@ -1122,5 +1122,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "title_field": "user", 
+ "track_changes": 1, 
  "track_seen": 0
 }

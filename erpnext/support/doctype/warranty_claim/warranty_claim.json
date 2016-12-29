@@ -1124,7 +1124,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-15 14:53:43.384773", 
+ "modified": "2016-12-29 14:59:43.324838", 
  "modified_by": "Administrator", 
  "module": "Support", 
  "name": "Warranty Claim", 
@@ -1160,5 +1160,6 @@
  "sort_order": "DESC", 
  "timeline_field": "customer", 
  "title_field": "customer_name", 
+ "track_changes": 1, 
  "track_seen": 0
 }

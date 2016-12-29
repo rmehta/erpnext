@@ -576,7 +576,7 @@
  "issingle": 1, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-12-16 02:18:58.187847", 
+ "modified": "2016-12-29 15:00:16.490870", 
  "modified_by": "Administrator", 
  "module": "Stock", 
  "name": "Stock Settings", 
@@ -608,5 +608,6 @@
  "read_only": 0, 
  "read_only_onload": 0, 
  "sort_order": "ASC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

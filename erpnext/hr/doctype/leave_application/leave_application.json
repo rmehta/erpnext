@@ -713,7 +713,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 3, 
- "modified": "2016-12-15 14:48:14.552415", 
+ "modified": "2016-12-29 14:59:45.095952", 
  "modified_by": "Administrator", 
  "module": "HR", 
  "name": "Leave Application", 
@@ -878,5 +878,6 @@
  "sort_order": "DESC", 
  "timeline_field": "employee", 
  "title_field": "employee_name", 
+ "track_changes": 1, 
  "track_seen": 0
 }

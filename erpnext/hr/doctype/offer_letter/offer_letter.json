@@ -393,7 +393,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-11-07 05:55:03.924272", 
+ "modified": "2016-12-29 14:59:59.398512", 
  "modified_by": "Administrator", 
  "module": "HR", 
  "name": "Offer Letter", 
@@ -428,5 +428,6 @@
  "sort_field": "modified", 
  "sort_order": "DESC", 
  "title_field": "applicant_name", 
+ "track_changes": 1, 
  "track_seen": 0
 }

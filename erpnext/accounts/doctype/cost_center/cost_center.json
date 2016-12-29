@@ -285,7 +285,7 @@
  "istable": 0, 
  "max_attachments": 0, 
  "menu_index": 0, 
- "modified": "2016-11-07 05:20:40.282432", 
+ "modified": "2016-12-29 15:00:06.663800", 
  "modified_by": "Administrator", 
  "module": "Accounts", 
  "name": "Cost Center", 
@@ -402,5 +402,6 @@
  "read_only_onload": 0, 
  "search_fields": "parent_cost_center, is_group", 
  "sort_order": "ASC", 
+ "track_changes": 1, 
  "track_seen": 0
 }

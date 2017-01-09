@@ -13,22 +13,22 @@ class TestAsset(unittest.TestCase):
 	def setUp(self):
 		set_depreciation_settings_in_company()
 		create_asset()
-		
+
 	def test_purchase_asset(self):
 		asset = frappe.get_doc("Asset", "Macbook Pro 1")
 		asset.submit()
-		
-		pi = make_purchase_invoice(asset.name, asset.item_code, asset.gross_purchase_amount, 
+
+		pi = make_purchase_invoice(asset.name, asset.item_code, asset.gross_purchase_amount,
 			asset.company, asset.purchase_date)
 		pi.supplier = "_Test Supplier"
 		pi.insert()
 		pi.submit()
-		
+
 		asset.load_from_db()
 		self.assertEqual(asset.supplier, "_Test Supplier")
 		self.assertEqual(asset.purchase_date, getdate("2015-01-01"))
 		self.assertEqual(asset.purchase_invoice, pi.name)
-		
+
 		expected_gle = (
 			("_Test Fixed Asset - _TC", 100000.0, 0.0),
 			("Creditors - _TC", 0.0, 100000.0)
@@ -45,10 +45,10 @@ class TestAsset(unittest.TestCase):
 		asset.load_from_db()
 		self.assertEqual(asset.supplier, None)
 		self.assertEqual(asset.purchase_invoice, None)
-		
-		self.assertFalse(frappe.db.get_value("GL Entry", 
+
+		self.assertFalse(frappe.db.get_value("GL Entry",
 			{"voucher_type": "Purchase Invoice", "voucher_no": pi.name}))
-		
+
 
 	def test_schedule_for_straight_line_method(self):
 		asset = frappe.get_doc("Asset", "Macbook Pro 1")
@@ -65,14 +65,14 @@ class TestAsset(unittest.TestCase):
 			for d in asset.get("schedules")]
 
 		self.assertEqual(schedules, expected_schedules)
-		
+
 	def test_schedule_for_straight_line_method_for_existing_asset(self):
 		asset = frappe.get_doc("Asset", "Macbook Pro 1")
 		asset.is_existing_asset = 1
 		asset.number_of_depreciations_booked = 1
 		asset.opening_accumulated_depreciation = 40000
 		asset.save()
-		
+
 		self.assertEqual(asset.status, "Draft")
 
 		expected_schedules = [
@@ -101,7 +101,7 @@ class TestAsset(unittest.TestCase):
 			for d in asset.get("schedules")]
 
 		self.assertEqual(schedules, expected_schedules)
-		
+
 	def test_schedule_for_double_declining_method_for_existing_asset(self):
 		asset = frappe.get_doc("Asset", "Macbook Pro 1")
 		asset.depreciation_method = "Double Declining Balance"
@@ -119,7 +119,7 @@ class TestAsset(unittest.TestCase):
 			for d in asset.get("schedules")]
 
 		self.assertEqual(schedules, expected_schedules)
-		
+
 	def test_schedule_for_manual_method(self):
 		asset = frappe.get_doc("Asset", "Macbook Pro 1")
 		asset.depreciation_method = "Manual"
@@ -242,7 +242,7 @@ def create_asset():
 
 	if not frappe.db.exists("Item", "Macbook Pro"):
 		create_fixed_asset_item()
-	
+
 	asset = frappe.get_doc({
 		"doctype": "Asset",
 		"asset_name": "Macbook Pro 1",
@@ -284,10 +284,10 @@ def create_fixed_asset_item():
 			"description": "Macbook Pro Retina Display",
 			"asset_category": "Computers",
 			"item_group": "All Item Groups",
-			"stock_uom": "Nos",
+			"stock_uom": "Unit",
 			"is_stock_item": 0,
 			"is_fixed_asset": 1
-		}).insert()		
+		}).insert()
 	except frappe.DuplicateEntryError:
 		pass
 

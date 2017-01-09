@@ -120,15 +120,16 @@ def install(country=None):
 		# UOM
 		{'uom_name': _('Unit'), 'doctype': 'UOM', 'name': _('Unit'), "must_be_whole_number": 1},
 		{'uom_name': _('Box'), 'doctype': 'UOM', 'name': _('Box'), "must_be_whole_number": 1},
-		{'uom_name': _('Kg'), 'doctype': 'UOM', 'name': _('Kg')},
+		{'uom_name': _('Kilogram'), 'doctype': 'UOM', 'name': _('Kilogram')},
 		{'uom_name': _('Meter'), 'doctype': 'UOM', 'name': _('Meter')},
 		{'uom_name': _('Litre'), 'doctype': 'UOM', 'name': _('Litre')},
 		{'uom_name': _('Gram'), 'doctype': 'UOM', 'name': _('Gram')},
-		{'uom_name': _('Nos'), 'doctype': 'UOM', 'name': _('Nos'), "must_be_whole_number": 1},
 		{'uom_name': _('Pair'), 'doctype': 'UOM', 'name': _('Pair'), "must_be_whole_number": 1},
 		{'uom_name': _('Set'), 'doctype': 'UOM', 'name': _('Set'), "must_be_whole_number": 1},
 		{'uom_name': _('Hour'), 'doctype': 'UOM', 'name': _('Hour')},
 		{'uom_name': _('Minute'), 'doctype': 'UOM', 'name': _('Minute')},
+		{'uom_name': _('Day'), 'doctype': 'UOM', 'name': _('Day')},
+		{'uom_name': _('Month'), 'doctype': 'UOM', 'name': _('Month')},
 
 		# Mode of Payment
 		{'doctype': 'Mode of Payment',

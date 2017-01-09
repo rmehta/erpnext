@@ -182,7 +182,7 @@ def get_data():
 					"type": "doctype",
 					"name": "UOM",
 					"label": _("Unit of Measure") + " (UOM)",
-					"description": _("e.g. Kg, Unit, Nos, m")
+					"description": _("e.g. Unit, Kilogram, etc")
 				},
 				{
 					"type": "doctype",

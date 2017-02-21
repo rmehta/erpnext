@@ -5,6 +5,10 @@
 {% include 'erpnext/selling/sales_common.js' %}
 
 erpnext.selling.QuotationController = erpnext.selling.SellingController.extend({
+	setup: function(doc) {
+		this._super(doc);
+		this.add_tour();
+	},
 	onload: function(doc, dt, dn) {
 		var me = this;
 		this._super(doc, dt, dn);
@@ -42,9 +46,32 @@ erpnext.selling.QuotationController = erpnext.selling.SellingController.extend({
 					})
 				}, __("Get items from"), "btn-default");
 		}
-
 		this.toggle_reqd_lead_customer();
 
+	},
+
+	add_tour: function() {
+		this.frm.add_tour([
+			{
+				action: 'new',
+				fieldname: 'customer',
+				title: __('Select Customer'),
+				content: __('Select the customer for which you want to create the quotation')
+			},
+			{
+				depends_on: 'customer',
+				fieldname: 'items.item_code',
+				title: __('Select Item'),
+				content: __('Select the item your customer wants'),
+			},
+			{
+				depends_on: 'items.item_code',
+				action: 'save'
+			},
+			{
+				action: 'submit'
+			},
+		])
 	},
 
 	quotation_to: function() {

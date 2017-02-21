@@ -9,5 +9,15 @@ frappe.listview_settings['Quotation'] = {
 		} else if(doc.status==="Lost") {
 			return [__("Lost"), "darkgrey", "status,=,Lost"];
 		}
+	},
+	refresh: function(list) {
+		new frappe.ui.Tour({
+			name: 'new_quotation',
+			steps: [{
+				title: __('Create a new Customer Quote'),
+				content: __('Click on new to create your first quotation'),
+				element: '.page-head:visible .btn-primary:visible'
+			}]
+		});
 	}
 };

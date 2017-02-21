@@ -29,6 +29,15 @@ def get_level():
 	if frappe.db.count('User') > 5:
 		activation_level += 1
 
+	if frappe.db.count('Student') > 5:
+		activation_level += 1
+
+	if frappe.db.count('Student Batch') > 5:
+		activation_level += 1
+
+	if frappe.db.count('Instructor') > 5:
+		activation_level += 1
+
 	# recent login
 	if frappe.db.sql('select name from tabUser where last_login > date_sub(now(), interval 2 day) limit 1'):
 		activation_level += 1

@@ -61,7 +61,7 @@ def get_notification_config():
 			"Appointment": {"status": "Open"},
 			"Service Task": {"status": "Open"},
 			"Consultation": {"docstatus": 0},
-			"Procedure": {"status": "Draft"}
+			"Procedure Appointment": {"status": "Draft"}
 		}
 	}
 

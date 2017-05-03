@@ -14,4 +14,4 @@ Hub Node
 Portal
 Maintenance
 Schools
-Medical
+Healthcare

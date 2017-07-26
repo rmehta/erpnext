@@ -23,8 +23,7 @@ class GitHubSettings(Document):
 			],
 			'Task': [
 				dict(label='GitHub Details', fieldtype='Section Break', insert_after='append'),
-				dict(label='GitHub Issue', insert_after='github_details'),
-				dict(label='GitHub Repository', insert_after='github_issue')
+				dict(label='GitHub Issue', insert_after='github_details')
 			]
 		}
 		for doctype, fields in custom_fields.items():
@@ -38,18 +37,55 @@ class GitHubSettings(Document):
 		if self.sync_projects_with_milestones:
 			for repo in self.get_repos():
 				# print repo.name, repo.full_name
-				for m in repo.get_milestones():
+				for milestone in repo.get_milestones():
+					frappe.publish_realtime('msgprint', dict(title='Progress', indicator='green', clear=1,
+						message = 'Adding milestone {0}'.format(frappe.bold(milestone.title))))
 					project_name = frappe.db.get_value('Project',
-						dict(github_milestone=m.number, github_repository=repo.full_name))
+						dict(github_milestone=milestone.number, github_repository=repo.full_name))
 					if not project_name:
-						frappe.get_doc(dict(
+						project = frappe.get_doc(dict(
 							doctype='Project',
-							project_name=m.title,
-							notes=m.description,
-							status=m.state.title(),
-							github_milestone=m.number,
+							project_name=milestone.title,
+							notes=milestone.description,
+							status=milestone.state.title(),
+							github_milestone=milestone.number,
 							github_repository=repo.full_name,
 						)).insert()
+					else:
+						project = frappe.get_doc('Project', project_name)
+
+					# issues
+					added = []
+					for issue in repo.get_issues(milestone=milestone, state='all'):
+						frappe.publish_realtime('msgprint', dict(title='Progress', indicator='green', clear=1,
+							message = 'Adding issue {0}'.format(frappe.bold(issue.title))))
+						issue_name = frappe.get_value('Task', dict(github_issue=issue.number))
+
+						if issue_name:
+							task = frappe.get_doc('Task', issue_name)
+						else:
+							task = frappe.new_doc('Task')
+
+						task.subject = issue.title
+						task.description = issue.body
+						task.github_issue = issue.number
+						task.project = project.name
+						task.status = 'Open' if issue.state == 'open' else 'Closed'
+						task.save()
+
+						added.append(task.name)
+
+					# set the rest as closed
+					added = [project.name] + added
+					frappe.db.sql('''
+						update
+							tabTask
+						set
+							status = 'Closed'
+						where
+							project = %s
+							and name not in ({0})
+						'''.format(', '.join(['%s'] * (len(added) - 1))), added)
 
 	def get_repos(self):
 		for d in self.repositories:
@@ -61,5 +97,6 @@ class GitHubSettings(Document):
 
 		return self._github
 
+@frappe.whitelist()
 def sync():
 	frappe.get_doc('GitHub Settings').sync()

@@ -31,7 +31,7 @@ def execute():
 		try:
 			migrate_item_variants()
 
-		except SQLError:
+		except frappe.db.SQLError:
 			print("`tabItem Variant` not found")
 
 def rename_and_reload_doctypes():

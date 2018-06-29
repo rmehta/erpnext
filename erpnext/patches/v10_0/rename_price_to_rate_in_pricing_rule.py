@@ -10,5 +10,5 @@ def execute():
 		rename_field("Pricing Rule", "price", "rate")
 
 	except Exception as e:
-		if e.args[0]!=1054:
+		if not frappe.db.is_column_missing(e):
 			raise

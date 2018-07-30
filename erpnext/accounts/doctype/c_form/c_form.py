@@ -57,14 +57,15 @@ class CForm(Document):
 		total = sum([flt(d.grand_total) for d in self.get('invoices')])
 		frappe.db.set(self, 'total_invoiced_amount', total)
 
-	def get_invoice_details(self, invoice_no):
-		"""	Pull details from invoices for referrence """
-		if invoice_no:
-			inv = frappe.db.get_value("Sales Invoice", invoice_no,
-				["posting_date", "territory", "base_net_total", "base_grand_total"], as_dict=True)
-			return {
-				'invoice_date' : inv.posting_date,
-				'territory'    : inv.territory,
-				'net_total'    : inv.base_net_total,
-				'grand_total'  : inv.base_grand_total
-			}
+@frappe.whitelist()
+def get_invoice_details(invoice_no):
+	"""	Pull details from invoices for referrence """
+	if invoice_no:
+		inv = frappe.db.get_value("Sales Invoice", invoice_no,
+			["posting_date", "territory", "base_net_total", "base_grand_total"], as_dict=True)
+		return {
+			'invoice_date' : inv.posting_date,
+			'territory'    : inv.territory,
+			'net_total'    : inv.base_net_total,
+			'grand_total'  : inv.base_grand_total
+		}

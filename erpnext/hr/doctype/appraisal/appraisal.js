@@ -33,7 +33,6 @@ cur_frm.cscript.kra_template = function(doc, dt, dn) {
 }
 
 cur_frm.cscript.calculate_total_score = function(doc,cdt,cdn){
-	//return get_server_fields('calculate_total','','',doc,cdt,cdn,1);
 	var val = doc.goals || [];
 	var total =0;
 	for(var i = 0; i<val.length; i++){

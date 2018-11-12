@@ -637,6 +637,28 @@ class TestDeliveryNote(unittest.TestCase):
 
 		set_perpetual_inventory(0, company)
 
+	def test_creation_of_sales_ledger_entry_on_submit(self):
+		sales_order = make_sales_order()
+		delivery_note = create_dn_against_so(sales_order.name, delivered_qty=2)
+		sales_ledger_entry = frappe.get_all('Sales Ledger Entry', fields='*', filters=dict(delivery_note=delivery_note.name))
+		
+		self.assertEquals(len(sales_ledger_entry), 1)
+		self.assertEquals(sales_ledger_entry[0].item, delivery_note.items[0].item_code)
+		self.assertEquals(sales_ledger_entry[0].qty, delivery_note.items[0].qty)
+		self.assertEquals(sales_ledger_entry[0].amount, delivery_note.items[0].base_amount)
+		self.assertEquals(sales_ledger_entry[0].sales_order, delivery_note.items[0].against_sales_order)
+
+		# check if reverse Sales Ledger Entry is created on cancellation
+		delivery_note.cancel()
+		
+		sales_ledger_entry = frappe.get_all('Sales Ledger Entry', fields='*', filters=dict(delivery_note=delivery_note.name))
+
+		self.assertEquals(len(sales_ledger_entry), 2)
+		self.assertEquals(sales_ledger_entry[0].item, delivery_note.items[0].item_code)
+		self.assertEquals(sales_ledger_entry[0].qty, -delivery_note.items[0].qty)
+		self.assertEquals(sales_ledger_entry[0].amount, -delivery_note.items[0].base_amount)
+		self.assertEquals(sales_ledger_entry[0].sales_order, delivery_note.items[0].against_sales_order)
+
 def create_delivery_note(**args):
 	dn = frappe.new_doc("Delivery Note")
 	args = frappe._dict(args)

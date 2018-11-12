@@ -177,6 +177,7 @@ class SalesOrder(SellingController):
 
 		frappe.get_doc('Authorization Control').validate_approving_authority(self.doctype, self.company, self.base_grand_total, self)
 		self.update_project()
+		self.create_sales_ledger_entry()
 		self.update_prevdoc_status('submit')
 
 		self.update_blanket_order()
@@ -189,6 +190,7 @@ class SalesOrder(SellingController):
 		self.check_nextdoc_docstatus()
 		self.update_reserved_qty()
 		self.update_project()
+		self.create_sales_ledger_entry(submit=False)
 		self.update_prevdoc_status('cancel')
 
 		frappe.db.set(self, 'status', 'Cancelled')
@@ -204,6 +206,17 @@ class SalesOrder(SellingController):
 			project.flags.dont_sync_tasks = True
 			project.update_sales_amount()
 			project.save()
+			
+	def create_sales_ledger_entry(self, submit=True):
+		for item in self.items:
+			frappe.get_doc(dict(
+				doctype = 'Sales Ledger Entry',
+				item = item.item_code,
+				qty = item.qty * (1 if submit else -1),
+				amount = item.base_amount * (1 if submit else -1),
+				sales_order = self.name,
+				is_order = 1
+			)).insert()
 
 	def check_credit_limit(self):
 		# if bypass credit limit check is set to true (1) at sales order level,

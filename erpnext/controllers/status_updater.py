@@ -340,7 +340,8 @@ class StatusUpdater(Document):
 			ref_doc = frappe.get_doc(ref_dt, ref_dn)
 
 			ref_doc.db_set("per_billed", per_billed)
-			ref_doc.set_status(update=True)
+			ref_doc.set_status(update=True)			
+			
 
 def get_tolerance_for(item_code, item_tolerance={}, global_tolerance=None):
 	"""

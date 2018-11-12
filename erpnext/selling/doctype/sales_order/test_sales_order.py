@@ -684,6 +684,28 @@ class TestSalesOrder(unittest.TestCase):
 		se.load_from_db()
 		se.cancel()
 		self.assertFalse(frappe.db.exists("Serial No", {"sales_order": so.name}))
+		
+	def test_creation_of_sales_ledger_entry_on_submit(self):
+		sales_order = make_sales_order()		
+		sales_ledger_entry = frappe.get_all('Sales Ledger Entry', fields='*', filters=dict(sales_order=sales_order.name))
+		
+		self.assertEquals(len(sales_ledger_entry), 1)
+		self.assertEquals(sales_ledger_entry[0].item, sales_order.items[0].item_code)
+		self.assertEquals(sales_ledger_entry[0].qty, sales_order.items[0].qty)
+		self.assertEquals(sales_ledger_entry[0].amount, sales_order.items[0].base_amount)
+
+		# check if reverse Sales Ledger Entry is created on cancellation
+		sales_order.cancel()
+		
+		sales_ledger_entry = frappe.get_all('Sales Ledger Entry', fields='*', filters=dict(sales_order=sales_order.name))
+
+		self.assertEquals(len(sales_ledger_entry), 2)
+		self.assertEquals(sales_ledger_entry[0].item, sales_order.items[0].item_code)
+		self.assertEquals(sales_ledger_entry[0].qty, -sales_order.items[0].qty)
+		self.assertEquals(sales_ledger_entry[0].amount, -sales_order.items[0].base_amount)
+		
+		
+		
 
 def make_sales_order(**args):
 	so = frappe.new_doc("Sales Order")
@@ -700,11 +722,7 @@ def make_sales_order(**args):
 	if "warehouse" not in args:
 		args.warehouse = "_Test Warehouse - _TC"
 
-	if args.item_list:
-		for item in args.item_list:
-			so.append("items", item)
-
-	else:
+	def add_item(item_code="_Test Item"):
 		so.append("items", {
 			"item_code": args.item or args.item_code or "_Test Item",
 			"warehouse": args.warehouse,
@@ -713,6 +731,16 @@ def make_sales_order(**args):
 			"rate": args.rate or 100
 		})
 
+	if args.item_list:
+		for item in args.item_list:
+			if isinstance(item, frappe.string_types):
+				add_item(item)
+			else:
+				so.append("items", item)
+
+	else:
+		add_item()
+		
 	so.delivery_date = add_days(so.transaction_date, 10)
 
 	if not args.do_not_save:
